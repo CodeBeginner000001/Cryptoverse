@@ -1,0 +1,30 @@
+---> CryptoCurrency React Application <---
+1. React
+3. Create UI using Ant design
+4. Create chats using chats.js
+5. Rapid API
+
+Rapid API - https://rapidapi.com/hub?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
+
+Rapid API CoinGecko - https://rapidapi.com/coingecko/api/coingecko
+
+Rapid API ma CoinRanking API - https://rapidapi.com/Coinranking/api/coinranking1/playground/apiendpoint_8e827dc1-e69a-4b92-af4a-654138659eba
+
+Rapid API ma Bing news Search API - https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/playground/apiendpoint_0aa346dd-16d6-40d4-930c-235f4b4fb9e6
+
+Ant Design For React Framework - https://ant.design/
+
+Dependencies used
+--> npm install antd @ant-design/icons
+--> npm install axios
+--> npm install chart.js
+--> npm install html-react-parser -------- parse html data to react.
+--> npm install millify ------- extremely large number into string.
+--> npm install moment ------- for date and time
+--> npm install react-chartjs-2 ------ for using charts in reactjs
+
+
+command line used ->
+npm install antd @ant-design/icons axios chart.js html-react-parser millify moment react-chartjs-2
+
+
