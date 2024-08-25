@@ -33,7 +33,7 @@ const CryptoDetails = () => {
         setTimehistory(timedata.data);
       };
       fetchcoins();
-    }, [timePeriod]);
+    }, [timePeriod,coinId]);
 
     
     const time = ['3h','24h','7d','30d','3m','1y','3y','5y'];

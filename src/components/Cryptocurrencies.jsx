@@ -20,7 +20,7 @@ const Cryptocurrencies = ({simplified}) => {
         setCoinsdata(data);
       };
       fetchcoins();
-    }, []);
+    }, [count]);
 
     // This line is used for search bar in the cryptocurrencies.
     let [searchTerm,setSearchTerm]= useState("")
