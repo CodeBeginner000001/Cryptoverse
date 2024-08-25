@@ -23,8 +23,9 @@ export const CryptoNews = {
 export const CryptocurrencyNews = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': '7ade7dad79mshb0968b75e6d2d26p14a33fjsn8526acffd254',
-		'x-rapidapi-host': 'cryptocurrency-news2.p.rapidapi.com'
+		'x-rapidapi-host': 'cryptocurrency-news2.p.rapidapi.com',
+		// 'x-rapidapi-key': '7ade7dad79mshb0968b75e6d2d26p14a33fjsn8526acffd254', //ashu2100ag
+		'x-rapidapi-key': '2cd2c89ba7msh9227dfae65653c3p16fa66jsn6face0470b79',
 	}
 };
 
