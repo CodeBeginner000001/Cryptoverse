@@ -33,7 +33,7 @@ const News = ({simplified}) => {
  return (
     <>
     { // used for heading in this component.
-      !simplified?<div className='news-heading'><Title level={2} className="home-title">Top News from &nbsp;</Title><img src={coindesklogo} style={{height:"35px"}}></img></div>:null
+      !simplified?<div className='news-heading'><Title level={2} className="home-title">Top News from &nbsp;</Title><img src={coindesklogo} style={{height:"35px"}} alt='none'></img></div>:null
     }
     {
     // for card component and adding the details in the card

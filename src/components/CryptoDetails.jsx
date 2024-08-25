@@ -1,7 +1,5 @@
 
 import React, { useState,useEffect } from 'react';
-import HTMLReactParser from 'html-react-parser';
-import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import { fetchdata, coinRankingApi} from "../Utils/fetchData";
 import millify from 'millify';
@@ -38,7 +36,6 @@ const CryptoDetails = () => {
     }, [timePeriod]);
 
     
-
     const time = ['3h','24h','7d','30d','3m','1y','3y','5y'];
 
   const stats = coinsdata ? [
@@ -133,7 +130,7 @@ const CryptoDetails = () => {
            <Title level={5}>
              {coinsdata.description}
            </Title>
-           <Title level={5}>Visit to : <a href={coinsdata.websiteUrl} target='_blank' style={{textDecoration:"underline"}}>{coinsdata.websiteUrl}</a> to know more</Title>
+           <Title level={5}>Visit to : <a href={coinsdata.websiteUrl} target='_blank' rel='noreferrer' style={{textDecoration:"underline"}}>{coinsdata.websiteUrl}</a> to know more</Title>
            </div>
          </Row>
          {/* for links */}
