@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import millify from "millify";
 import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
-import { fetchdata, coinRankingApi } from "../Utils/fetchData";
+import { fetchdata, coinRankingApi} from "../Utils/fetchData";
 import { Cryptocurrencies, News } from "./index";
+import Loading from "./Loading";
 // simplify our work from this <typography.title> to
 const { Title } = Typography;
 
 const Homepage = () => {
   // code lines from 12 - 20 is used for fetching global crypto stats
   const [coinsdata, setCoinsdata] = useState(null);
+
+  // used for render it when we reload it
   useEffect(() => {
     const fetchcoins = async () => {
       const data = await fetchdata(
@@ -22,14 +25,16 @@ const Homepage = () => {
     fetchcoins();
   }, []);
 
+
   return (
     <>
+     {/* Global Crypto Stats */}
       <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
       {
-       coinsdata && 
-        (
+       coinsdata ?
+      //  Details of Global Crypto Stats
           <Row>
             <Col span={12}><Statistic title="Total Cryptocurrencies" value={coinsdata.data.stats.total}/></Col>
             <Col span={12}><Statistic title="Total Coins" value={coinsdata.data.stats.totalCoins}/></Col>
@@ -37,8 +42,7 @@ const Homepage = () => {
             <Col span={12}><Statistic title="Total Market Cap" value={millify(coinsdata.data.stats.totalMarketCap)}/></Col>
             <Col span={12}><Statistic title="Total 24h Volume" value={millify(coinsdata.data.stats.total24hVolume)}/></Col>
             <Col span={12}><Statistic title="Total Markets" value={millify(coinsdata.data.stats.totalMarkets)}/></Col>
-          </Row>
-        )
+          </Row>:<Loading/>
       }
 
       {/* Top 12 Cryptocurrencies in the world */}
@@ -47,7 +51,7 @@ const Homepage = () => {
             <Title level={3} className="show-more"> <Link to="/cryptocurrencies">Show More</Link></Title>
       </div>
       {
-        coinsdata && <Cryptocurrencies simplified={true}/>
+        coinsdata ? <Cryptocurrencies simplified={true}/>:<Loading/>
       }
 
       {/* Latest Crypto News */}
@@ -55,9 +59,7 @@ const Homepage = () => {
             <Title level={2} className="home-title">Latest Crypto News</Title>
             <Title level={3} className="show-more"><Link to="/news">Show More</Link></Title>
       </div>
-      {
-        coinsdata && <News simplified />
-      }  
+        <News simplified={true}/>
     </>
   );
 };

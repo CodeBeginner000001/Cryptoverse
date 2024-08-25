@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { fetchdata, coinRankingApi } from "../Utils/fetchData";
 import millify from 'millify';
 import {Link } from 'react-router-dom';
-import {Card,Row,Col,Input} from "antd";
+import {Card,Row,Col} from "antd";
+import Loading from './Loading';
 const Cryptocurrencies = ({simplified}) => {
 
   //  for limiting the number of data fetch depending upon simplified
@@ -27,7 +28,7 @@ const Cryptocurrencies = ({simplified}) => {
     // It is the filter that is applied in this component.
     const [filteredCoins, setFilterCoins]= useState([]);
     useEffect(()=>{
-      if(coinsdata){ // if coinsdata is available the apply the filter else dont do anything
+      if(coinsdata){ // if coinsdata is available then apply the filter else dont do nothing
         const filteredData = coinsdata.data.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
         setFilterCoins(filteredData);
       }
@@ -36,13 +37,16 @@ const Cryptocurrencies = ({simplified}) => {
 
   return (
     <>
-    { !simplified?
-      <div className='search-crypto' style={{margin: "20px auto 30px auto", width: "250px"}}>
+    
+    {// for Search bar in this component 
+    !simplified?
+      <div className='search-crypto'>
       <input type="text" placeholder='Search Cryptocurrency' onChange={(e)=> setSearchTerm(e.target.value)} style={{padding:"10px", width:"200px"}}/>
      </div>:null
     }
     { 
-    coinsdata && 
+    // for card component and adding the details in the card
+    coinsdata ?
       <Row gutter={[32,32]} className='crypto-card-container'>
         { 
           filteredCoins.map((currency)=>(
@@ -50,8 +54,7 @@ const Cryptocurrencies = ({simplified}) => {
               <Link to={`/crypto/${currency.uuid}`}>
                 <Card title={`${currency.rank}. ${currency.name}`} 
                       extra={<img className='crypto-image' src={currency.iconUrl}/>}
-                      hoverable={true}
-                >
+                      hoverable={true} >
                   <p>Price : {millify(currency.price)}</p>
                   <p>Market Cap : {millify(currency.marketCap)}</p>
                   <p>Daily Change: {millify(currency.change)}%</p>
@@ -60,8 +63,8 @@ const Cryptocurrencies = ({simplified}) => {
             </Col>
           ))
         }
-      </Row>
-}
+      </Row>:<Loading/>
+     }
     </>
   )
 }

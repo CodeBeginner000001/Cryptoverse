@@ -290,8 +290,13 @@ padding: 0px 20px;
 .select-news{
   width: 180px;
 }
+.news-heading{
+  display:flex;
+  justify-content: center;
+}
 .news-card{
-  min-height: 300px !important;
+  min-height: 100px !important;
+  min-width: 300px !important;
 }
 .news-image-container{
   display: flex !important;
@@ -314,6 +319,7 @@ width: 70%;
   justify-content: space-between;
 }
 .provider-name{
+  display:inline-block;
   margin-left: 10px;
 }
 
@@ -324,6 +330,7 @@ width: 70%;
   color: #0071bd;
 }
 .chart-title{
+  margin-top: 20px;
   color: #0071bd !important;
 }
 .price-container{
@@ -376,3 +383,77 @@ width: 70%;
   padding: 20px;
   align-items: center;
 }
+
+.exchange-data{
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-coin-heading{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.panel-coin-heading-text{
+  margin-left: 5px;
+}
+
+.panel-coin-body{
+  margin-top: 10px;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.panel-coin-heading-body-text{
+  margin: 7px 0;
+  text-wrap:nowrap;
+}
+
+
+@media  screen and (max-width:500px) {
+  .exchange-data{
+    margin: 0;
+  }
+  .exchange-change{
+    display: none;
+  }
+}
+
+@media screen and (max-width:380px){
+  .panel-coin-body{
+    margin: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media  screen and (max-width:365px) {
+  .exchange-data{
+    justify-content: space-evenly;
+  }
+  .exchange-listedAt{
+    display: none;
+  }
+  .exchange-change{
+    display: none;
+  }
+}
+
+@media  screen and (max-width:320px) {
+  .exchange-symbol{
+    display: none;
+  }
+}
+@media  screen and (max-width:266px) {
+  .exchange-heading{
+    margin-top: 30px;
+  }
+}
+
+
+
+
