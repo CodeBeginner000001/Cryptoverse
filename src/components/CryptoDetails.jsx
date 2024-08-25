@@ -61,6 +61,7 @@ const CryptoDetails = () => {
     {
       coinsdata ? 
       <Col className='coin-detail-container'>
+        {/* heading of the chart */}
         <Col className='coin-heading-container'>
           <Title level={2} className='coin-name'>
             {coinsdata.name} ({coinsdata.symbol}) Price
@@ -78,10 +79,11 @@ const CryptoDetails = () => {
         > 
         {time.map((date)=><Option key={date}>{date}</Option>)}
         </Select>
-
+        {/* For drawing graph */}
         <LineChart coinHistory={timehistory} currentPrice = {coinsdata.price?millify(coinsdata.price):0} coinName= {coinsdata.name}/>
 
         <Col className='stats-container'>
+          {/* Coin value statistics */}
           <Col className='coin-value-statistics'>
             <Col className='coin-value=statistics-heading'>
               <Title level={3} className='coin-detailes-heading' style={{marginTop:"40px"}}>
@@ -101,6 +103,7 @@ const CryptoDetails = () => {
               </Col>
             )}
           </Col>
+          {/* Other statistics */}
           <Col className='other-stats-info'>
             <Col className='coin-value=statistics-heading'>
               <Title level={3} className='coin-detailes-heading' style={{marginTop:"40px"}}>
@@ -123,6 +126,7 @@ const CryptoDetails = () => {
         </Col>
 
         <Col className='coin-desc-link'>
+          {/* for description */}
          <Row className='coin-desc'>
           <div>
            <Title level={3} className='coin-details-heading'>What is {coinsdata.name}</Title>
@@ -132,6 +136,7 @@ const CryptoDetails = () => {
            <Title level={5}>Visit to : <a href={coinsdata.websiteUrl} target='_blank' style={{textDecoration:"underline"}}>{coinsdata.websiteUrl}</a> to know more</Title>
            </div>
          </Row>
+         {/* for links */}
          <Col className='coin-links'>
           <Title level={3} className='coin-details-heading'>
             {coinsdata.name} Links

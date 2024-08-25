@@ -7,6 +7,7 @@ import  Loading from "./Loading"
 const { Text } = Typography;
 const { Panel } = Collapse;
 const Exchanges = () => {
+  // used to fetch coin data
   let [coindata, setCoinsdata] = useState(null);
   useEffect(() => {
     const fetchcoinData = async () => {
@@ -21,13 +22,14 @@ const Exchanges = () => {
   }, []);
   return (
     <>
+    {/* Heading of the component */}
     <Row  className="exchange-data exchange-heading" style={{marginBottom:"10px"}}>
       <Col xs={12} sm={6}><strong>Exchanges</strong></Col>
       <Col xs={4} sm={6}><strong>24h Trade Volume</strong></Col>
       <Col xs={4} sm={6} className="exchange-listedAt"><strong>Listed At</strong></Col>
       <Col xs={4} sm={6} className="exchange-change"><strong>Change</strong></Col>
     </Row>
-     
+     {/* body part of the component */}
     { coindata?
       <Row>
         {

@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import {Select,Typography,Row,Col,Avatar,Card} from 'antd';
+import {Typography,Row,Col,Avatar,Card} from 'antd';
 import { fetchdata , CryptocurrencyNews } from '../Utils/fetchData';
 import moment from 'moment';
 import Loading from './Loading';
@@ -50,6 +50,7 @@ const News = ({simplified}) => {
                 <p>
                   {cryptonews.description}
                 </p>
+                {/* This part container the time in the news card */}
                 <div className="provider-container">
                   <div>
                     <Avatar src={newsproviderIcon} alt='new-provider'></Avatar>

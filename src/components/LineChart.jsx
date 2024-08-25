@@ -1,11 +1,11 @@
 import React from 'react'
-import {Chart as ChartJS} from "chart.js/auto"
 import {Line} from 'react-chartjs-2'
 import {Col,Row,Typography} from 'antd';
 import Loading from './Loading';
 
 const {Title} = Typography;
 const LineChart = ({coinHistory,currentPrice,coinName}) => {
+    // Storing price at that time in two different variable
     let coinPrice =[];
     let coinTimestamp = [];
     if(coinHistory){
@@ -14,7 +14,7 @@ const LineChart = ({coinHistory,currentPrice,coinName}) => {
         coinPrice.push(coinHistory.history[i].price)
         coinTimestamp.push(new Date(coinHistory.history[i].timestamp *1000).toLocaleDateString());
     }}
-
+    // This is used for creating chart
     const data={
         labels:coinTimestamp,
         datasets:[
@@ -30,9 +30,6 @@ const LineChart = ({coinHistory,currentPrice,coinName}) => {
 
   return (
     <>
-    {
-        console.log(coinTimestamp[5])
-    }
     { 
     coinHistory?<div>
      <Row className='chart-header'>
