@@ -10,7 +10,7 @@ Rapid API CoinGecko - https://rapidapi.com/coingecko/api/coingecko
 
 Rapid API ma CoinRanking API - https://rapidapi.com/Coinranking/api/coinranking1/playground/apiendpoint_8e827dc1-e69a-4b92-af4a-654138659eba
 
-Rapid API ma Bing news Search API - https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/playground/apiendpoint_0aa346dd-16d6-40d4-930c-235f4b4fb9e6
+Rapid API ma Cryptocurrency News API - https://rapidapi.com/topapi-topapi-default/api/cryptocurrency-news2/playground/apiendpoint_6e13ba00-a235-4ba7-b8b6-6f96466cdda6
 
 Ant Design For React Framework - https://ant.design/
 
