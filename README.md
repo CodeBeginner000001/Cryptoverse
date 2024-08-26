@@ -135,12 +135,13 @@ This will start the application on `http://localhost:3000`.
 <hr>
 
 <p align="center">
+  <h2>News from CoinDesk</h2>
+</p>
+<p align="center">
   <img width="1397" alt="Screenshot 2024-08-26 at 9 15 30 AM" src="https://github.com/user-attachments/assets/c1d1df1b-5113-458d-bd44-9b550355e751">
 </p>
 <hr>
-<p align="center">
-  **News from CoinDesk**
-</p>
+
 
 ## Visiting Link
 
