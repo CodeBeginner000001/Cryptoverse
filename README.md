@@ -119,7 +119,7 @@ This will start the application on `http://localhost:3000`.
 
 ## Images
 <p align="center">
-  <h2>Cryptocurrencies</h2>
+  <h4>Cryptocurrencies</h4>
 </p>
 <p align="center">
   <img width="1440" alt="Screenshot 2024-08-26 at 9 14 20 AM" src="https://github.com/user-attachments/assets/7eb778f6-9270-435e-90d3-01c43b7d2386">
@@ -127,7 +127,7 @@ This will start the application on `http://localhost:3000`.
 <hr>
 
 <p align="center">
-  <h2>Exchanges</h2>
+  <h4>Exchanges</h4>
 </p>
 <p align="center">
   <img width="1398" alt="Screenshot 2024-08-26 at 9 15 19 AM" src="https://github.com/user-attachments/assets/3eba527d-aa6d-4f67-870e-e9976bad8480">
@@ -135,7 +135,7 @@ This will start the application on `http://localhost:3000`.
 <hr>
 
 <p align="center">
-  <h2>News from CoinDesk</h2>
+  <h4>News from CoinDesk</h4>
 </p>
 <p align="center">
   <img width="1397" alt="Screenshot 2024-08-26 at 9 15 30 AM" src="https://github.com/user-attachments/assets/c1d1df1b-5113-458d-bd44-9b550355e751">
