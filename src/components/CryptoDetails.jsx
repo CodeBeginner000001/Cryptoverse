@@ -6,10 +6,16 @@ import millify from 'millify';
 import { Col, Row, Typography, Select } from 'antd';
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import Loading from './Loading';
+import {Chart as ChartJS} from "chart.js/auto"
 import LineChart from './LineChart';
+
+ChartJS.defaults.set({
+  responsive: true,
+});
 
 const {Title,Text} = Typography;
 const {Option} = Select;
+
 const CryptoDetails = () => {
 
   const {coinId}= useParams();

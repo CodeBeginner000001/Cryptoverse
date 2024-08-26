@@ -261,6 +261,7 @@ padding: 0px 20px;
   background-color: var(--bgSecondary);
 }
 
+
 @media screen and (max-width:1000px){
   .stats-container{
       flex-direction: column;
