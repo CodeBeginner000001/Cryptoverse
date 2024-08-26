@@ -261,7 +261,6 @@ padding: 0px 20px;
   background-color: var(--bgSecondary);
 }
 
-
 @media screen and (max-width:1000px){
   .stats-container{
       flex-direction: column;
@@ -273,6 +272,7 @@ padding: 0px 20px;
       margin-top: 0px;
   }
 }
+
 
 @media screen and (max-width: 500px){
   .coin-links{
@@ -291,13 +291,8 @@ padding: 0px 20px;
 .select-news{
   width: 180px;
 }
-.news-heading{
-  display:flex;
-  justify-content: center;
-}
 .news-card{
-  min-height: 100px !important;
-  min-width: 300px !important;
+  min-height: 300px !important;
 }
 .news-image-container{
   display: flex !important;
@@ -320,7 +315,6 @@ width: 70%;
   justify-content: space-between;
 }
 .provider-name{
-  display:inline-block;
   margin-left: 10px;
 }
 
@@ -331,7 +325,6 @@ width: 70%;
   color: #0071bd;
 }
 .chart-title{
-  margin-top: 20px;
   color: #0071bd !important;
 }
 .price-container{
