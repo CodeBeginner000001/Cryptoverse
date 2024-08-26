@@ -119,18 +119,18 @@ This will start the application on `http://localhost:3000`.
 
 ## Images
 <p align="center">
-  <img width="1440" alt="Screenshot 2024-08-26 at 9 14 20 AM" src="https://github.com/user-attachments/assets/7eb778f6-9270-435e-90d3-01c43b7d2386">
+  <h2>Cryptocurrencies</h2>
 </p>
 <p align="center">
-  **Cryptocurrencies**
+  <img width="1440" alt="Screenshot 2024-08-26 at 9 14 20 AM" src="https://github.com/user-attachments/assets/7eb778f6-9270-435e-90d3-01c43b7d2386">
 </p>
 <hr>
 
 <p align="center">
-  <img width="1398" alt="Screenshot 2024-08-26 at 9 15 19 AM" src="https://github.com/user-attachments/assets/3eba527d-aa6d-4f67-870e-e9976bad8480">
+  <h2>Exchanges</h2>
 </p>
 <p align="center">
-  **Exchanges**
+  <img width="1398" alt="Screenshot 2024-08-26 at 9 15 19 AM" src="https://github.com/user-attachments/assets/3eba527d-aa6d-4f67-870e-e9976bad8480">
 </p>
 <hr>
 
