@@ -378,6 +378,11 @@ width: 70%;
   align-items: center;
 }
 
+.news-heading{
+  display: flex;
+  justify-content: center;
+}
+
 .exchange-data{
   display: flex;
   margin-left: 20px;
