@@ -14,7 +14,7 @@ const News = ({simplified}) => {
   useEffect(()=>{
     const fetchNews = async ()=>{
       const newsdata = await fetchdata(`https://cryptocurrency-news2.p.rapidapi.com/v1/coindesk`,CryptocurrencyNews);
-      console.log(newsdata);
+      // console.log(newsdata);
       setNews(newsdata.data);
     }
     fetchNews();
