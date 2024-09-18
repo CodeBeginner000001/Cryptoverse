@@ -16,7 +16,7 @@ const News = ({simplified}) => {
       const newsdata = await fetchdata(`https://cryptocurrency-news2.p.rapidapi.com/v1/coindesk`,CryptocurrencyNews);
       // console.log(CryptocurrencyNews);
       // console.log(newsdata);
-      setNews(newsdata.data);
+      setNews(newsdata.data); 
     }
     fetchNews();
   },[])
