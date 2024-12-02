@@ -27,8 +27,8 @@ export const CryptocurrencyNews = {
 		'x-rapidapi-host': 'cryptocurrency-news2.p.rapidapi.com',
 		
 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTOCURRENCYNEWS_API,  // ashu2300ag
-		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTOCURRENCYNEWS_API_1, // ashu2100ag
-		'x-rapidapi-key': process.env.REACT_APP_CRYPTOCURRENCYNEWS_API_2, // adarsh001ag
+		'x-rapidapi-key': process.env.REACT_APP_CRYPTOCURRENCYNEWS_API_1, // ashu2100ag
+		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTOCURRENCYNEWS_API_2, // adarsh001ag
 		
 	}
 };
