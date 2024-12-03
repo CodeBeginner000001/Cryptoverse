@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import {Typography,Row,Col,Avatar,Card} from 'antd';
-import { fetchdata , CryptocurrencyNews } from '../Utils/fetchData';
+import { fetchdata , Crypto_News } from '../Utils/fetchData';
 import moment from 'moment';
 import Loading from './Loading';
 import { v4 as uuidv4 } from 'uuid';
@@ -13,19 +13,25 @@ const News = ({simplified}) => {
   let [news,setNews]=useState(null);
   useEffect(()=>{
     const fetchNews = async ()=>{
-      const newsdata = await fetchdata(`https://cryptocurrency-news2.p.rapidapi.com/v1/coindesk`,CryptocurrencyNews);
+      const newsdata = await fetchdata(`https://crypto-news16.p.rapidapi.com/news/coindesk`,Crypto_News);
       // console.log(CryptocurrencyNews);
       // console.log(newsdata);
-      setNews(newsdata.data); 
+      setNews(newsdata); 
     }
     fetchNews();
   },[])
 
-
+  // console.log(news)
   let finalNews=news; // used for applying slice method when simplified is true
+
   if(simplified){
     finalNews = news? news.slice(0,6):null;
+    // console.log(finalNews)
   }
+  const stripHtml = (html) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent || "";
+  };
  
  const demo = "https://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg"; // for news
  const newsproviderIcon = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiA0XJqwon6XGTG9E2AReHPI9d9JeVfgTbZw&s" // news provider
@@ -49,7 +55,7 @@ const News = ({simplified}) => {
                   <img src={cryptonews.thumbnail || demo} alt="" style={{height:"100px",marginLeft:"20px",marginBottom:"20px"}}/>
                 </div>
                 <p>
-                  {cryptonews.description}
+                  {stripHtml(cryptonews.description).slice(0,300)}
                 </p>
                 {/* This part container the time in the news card */}
                 <div className="provider-container">
@@ -57,7 +63,7 @@ const News = ({simplified}) => {
                     <Avatar src={newsproviderIcon} alt='new-provider'></Avatar>
                     <Typography className='provider-name'>{"CoinDesk"}</Typography>
                   </div>
-                  <Typography>{moment(cryptonews.createdAt).startOf('ss').fromNow()}</Typography>
+                  <Typography>{moment(cryptonews.date).startOf('ss').fromNow()}</Typography>
                 </div>
               </a>
             </Card>
